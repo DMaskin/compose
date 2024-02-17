@@ -9,6 +9,9 @@ services:
       - "3000:3000"
     volumes:
       - ../frontend:/usr/app
+    environment:
+      API_URL: ${API_URL}
+      API_TOKEN: ${API_TOKEN}
     networks:
       - strapi
   cms:
